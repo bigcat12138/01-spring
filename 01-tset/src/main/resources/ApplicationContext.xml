@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="myDate" class="java.util.Date">
+        <property name="time" value="2147483647123456"/>
+    </bean>
+    <bean id="stu01" class="com.tg.domain.Student">
+        <property name="age" value="18"/>
+        <property name="name" value="大帅逼"/>
+        <property name="school" ref="school01"/>
+    </bean>
+    <bean id="school01" class="com.tg.domain.School">
+        <property name="name" value="家里蹲大学"/>
+        <property name="address" value="天上人间"/>
+    </bean>
+
+    <bean id="stu02" class="com.tg.domain.Student">
+        <constructor-arg name="name" value="大美丽"/>
+        <constructor-arg name="school" ref="school02"/>
+        <constructor-arg name="age" value="100"/>
+    </bean>
+    <bean id="school02" class="com.tg.domain.School">
+        <constructor-arg value="农夫三拳大学"/>
+        <constructor-arg value="瑞士"/>
+    </bean>
+</beans>

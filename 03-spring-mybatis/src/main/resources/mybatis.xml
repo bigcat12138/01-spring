@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--设置mybatis输出日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <typeAliases>
+        <!--类别名-->
+        <package name="com.tg.domain"/>
+    </typeAliases>
+    <mappers>
+        <!--name包下所有mapper注册-->
+        <package name="com.tg.dao"/>
+    </mappers>
+</configuration>
